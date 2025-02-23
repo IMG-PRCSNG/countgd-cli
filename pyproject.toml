@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "countgd-cli"
+dynamic = ["version", "dependencies"]
+description = "CLI for getting predicitons from CountGD HF Space"
+readme = "README.md"
+requires-python = ">= 3.10"
+keywords = []
+
+authors = [
+  {name = "IMG-PRCSNG", email = "prasanna@robots.ox.ac.uk"}
+]
+maintainers = [
+  {name = "IMG-PRCSNG", email = "prasanna@robots.ox.ac.uk"}
+]
+classifiers = [
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+license = {text = "BSD License"}
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+]
+
+[project.scripts]
+countgd = 'countgd_cli.__main__:app'
+
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.in"]}

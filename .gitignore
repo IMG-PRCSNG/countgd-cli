@@ -1,0 +1,9 @@
+logs/
+*.log
+
+__pycache__/
+*.py[odc]
+*.egg-info/
+.python-version
+
+.env
